@@ -1,3 +1,3 @@
-for (i=0;i < 6; i++) {
-    document.write(`<h${i}>Olá Sala!</h${i}>`)
+for (i=1;i <= 6; i++) {
+    document.write(`<h${i}>Olá Sala!</h${i}>`);
 }
