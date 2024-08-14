@@ -5,7 +5,7 @@ btn.addEventListener('click', function() {
     const number = Number(input)
 
     if (!Number.isInteger(number) || number <= 0) {
-        alert("Número incorreto!")
+        alert("Insira um numero inteiro e positivo!")
     }
     else if (number % 2 == 0)
     { 
