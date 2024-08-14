@@ -1,13 +1,15 @@
-const input = document.getElementById("number").value
-const btn = document.getElementById("btn")
+document.getElementById("form").addEventListener('submit', function(event) {
+    event.preventDefault()
 
-const number = Number(input)
+    const btn = document.getElementById("btn")
+    const input = document.getElementById("number").value
+    const number = Number(input)
 
-btn.addEventListener('click', function(){
     if (!Number.isInteger(number) || number <= 0) {
         alert("Número incorreto!")
-    } else {
-        if (number % 2 == 0)
+    }
+
+    if (number % 2 == 0)
         { 
             alert("Número par!")
         }
@@ -15,5 +17,4 @@ btn.addEventListener('click', function(){
         { 
             alert("Número ímpar!")
         }
-    }
 })
