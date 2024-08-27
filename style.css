@@ -59,5 +59,59 @@ body {
     opacity: 0.5;
 }
 
+#menu[data-active-index="0"] > #menu-background-pattern {
+    background-position: 0% -25%;
+}
 
+#menu[data-active-index="1"] > #menu-background-pattern {
+    background-position: 0% -50%;
+}
 
+#menu[data-active-index="2"] > #menu-background-pattern {
+    background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+    background-position: 0% -100%;
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+    background-position: center 45%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+    background-position: center 50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+    background-position: center 55%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+    background-position: center 60%;
+}
+
+#menu-background-image {
+    height: 100%;
+    width: 100%;
+
+    background-image: url("https://images.unsplash.com/photo-1677472423915-0cc46eb36685?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80");
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+
+    background-position: center 40%;
+    background-size: 110vmax;
+    opacity: 0.15;
+
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
+}
+
+#menu-items:hover ~ #menu-background-image {
+    background-size: 100vmax;
+    opacity: 0.10;
+}
