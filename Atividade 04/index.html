@@ -5,22 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 04</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+
+.invalid-feedback {
+    display: none;
+    color: red;
+}
+
+input.is-invalid + .invalid-feedback {
+    display: block;
+}
+
+/* body {
+    font-family: Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 26px;
+    color: #000;
+}
+
+label {
+    font-size: 10px;
+    color: #222;
+    opacity: 0.9;
+}
+
+input {
+    font-size: 12px;
+    color: #999;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+button {
+    font-size: 12px;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+    display: none;
+} */
+
+
+</style>
+
 </head>
 <body>
+    
     <main class="container">
+        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../ex001/index.html">EX 001</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../ex002/index.html">EX 002</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../ex003/index.html">EX 003</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../ex004/index.html">EX 004</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>         -->
 
-        <h1>To-do List:</h1>
-        <form action="" id="form">
-            <!-- <label for="inputValue" required></label> -->
-            
-            <input type="text" id="inputValue" required>
-            <button type="submit">+</button>
-        </form>
-        <ol id="valueList">
-            
-        </ol>
+          <h1 class="text-center">Cadastro</h1>
+    
+    <!-- Escolha entre Aluno e Professor -->
+    <div class="mb-3">
+        <label class="form-check-label me-3">
+            <input type="radio" name="tipoPessoa" value="aluno" checked class="form-check-input"> Aluno
+        </label>
+        <label class="form-check-label">
+            <input type="radio" name="tipoPessoa" value="professor" class="form-check-input"> Professor
+        </label>
+    </div>
+
+    <form id="formCadastro">
+        <!-- Campos comuns -->
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" id="nome" class="form-control" required>
+            <div class="invalid-feedback"></div>
+        </div>
         
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" class="form-control" required>
+            <div class="invalid-feedback"></div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="dataNascimento" class="form-label">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" class="form-control" required>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="telefoneFixo" class="form-label">Telefone Fixo:</label>
+            <input type="tel" id="telefoneFixo" class="form-control" required>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="celular" class="form-label">Celular:</label>
+            <input type="tel" id="celular" class="form-control" required>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <!-- Campos específicos para Aluno -->
+        <div class="aluno-only mb-3">
+            <label for="matriculaAluno" class="form-label">Matrícula Aluno (10 dígitos):</label>
+            <input type="text" id="matriculaAluno" maxlength="10" class="form-control">
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="aluno-only mb-3">
+            <label for="cursoAluno" class="form-label">Curso (Aluno):</label>
+            <input type="text" id="cursoAluno" class="form-control">
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <!-- Campos específicos para Professor -->
+        <div class="professor-only mb-3" style="display: none;">
+            <label for="matriculaProfessor" class="form-label">Matrícula Professor (5 dígitos):</label>
+            <input type="text" id="matriculaProfessor" maxlength="5" class="form-control">
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="professor-only mb-3" style="display: none;">
+            <label for="areaProfessor" class="form-label">Área de Atuação (Professor):</label>
+            <input type="text" id="areaProfessor" class="form-control">
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+
+
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
