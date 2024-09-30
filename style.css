@@ -26,7 +26,7 @@ body {
 .menu-item {
     color: white;
     font-size: clamp(3rem, 8vh, 8rem);
-    /*font-family: 'Courier New', Courier, monospace;*/
+    font-family: 'Helvetica';/*, Courier, monospace;*/
 
     display: block;
     text-decoration: none;
@@ -91,11 +91,15 @@ body {
     background-position: center 60%;
 }
 
+#menu[data-active-index="4"] > #menu-background-image {
+    background-position: center 65%;
+}
+
 #menu-background-image {
     height: 100%;
     width: 100%;
 
-    background-image: url("https://images.unsplash.com/photo-1677472423915-0cc46eb36685?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80");
+    background-image: url("https://images.unsplash.com/photo-1677472423915-0cc46eb36685?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"); 
 
     position: absolute;
     left: 0px;
