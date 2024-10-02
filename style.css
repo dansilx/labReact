@@ -60,18 +60,26 @@ body {
 }
 
 #menu[data-active-index="0"] > #menu-background-pattern {
-    background-position: 0% -25%;
+    background-position: 0% -15%;
 }
 
 #menu[data-active-index="1"] > #menu-background-pattern {
-    background-position: 0% -50%;
+    background-position: 0% -30%;
 }
 
 #menu[data-active-index="2"] > #menu-background-pattern {
-    background-position: 0% -75%;
+    background-position: 0% -45%;
 }
 
 #menu[data-active-index="3"] > #menu-background-pattern {
+    background-position: 0% -60%;
+}
+
+#menu[data-active-index="4"] > #menu-background-pattern {
+    background-position: 0% -75%;
+}
+
+#menu[data-active-index="5"] > #menu-background-pattern {
     background-position: 0% -100%;
 }
 
@@ -93,6 +101,10 @@ body {
 
 #menu[data-active-index="4"] > #menu-background-image {
     background-position: center 65%;
+}
+
+#menu[data-active-index="5"] > #menu-background-image {
+    background-position: center 70%;
 }
 
 #menu-background-image {
